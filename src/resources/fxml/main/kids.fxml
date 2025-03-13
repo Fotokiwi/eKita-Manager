@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minWidth="1000.0" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.root.kidsController">
+  <children>
+    <SplitPane dividerPositions="0.24803921568627452" focusTraversable="true" prefHeight="768.0" prefWidth="1024.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+      <items>
+        <AnchorPane maxWidth="400.0" minWidth="250.0" prefWidth="320.0">
+          <children>
+            <SplitPane dividerPositions="0.7506561679790026" focusTraversable="true" orientation="VERTICAL" prefHeight="764.0" prefWidth="324.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane maxWidth="-1.0" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                  <children>
+                              <VBox prefHeight="569.0" prefWidth="248.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Pane maxHeight="50.0" minHeight="50.0" prefHeight="50.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                                       <children>
+                                          <Label layoutX="52.0" text="Kinder mit Status anzeigen:" />
+                                          <HBox alignment="CENTER" layoutY="13.0" maxHeight="35.0" minHeight="35.0" prefHeight="35.0" prefWidth="248.0" spacing="10.0">
+                                             <children>
+                                                <RadioButton fx:id="kids_radiobutton_active" mnemonicParsing="false" selected="true" text="Aktiv">
+                                                   <toggleGroup>
+                                                      <ToggleGroup fx:id="KinderStatus" />
+                                                   </toggleGroup>
+                                                </RadioButton>
+                                                <RadioButton fx:id="kids_radiobutton_all" mnemonicParsing="false" text="Alle" toggleGroup="$KinderStatus" />
+                                                <RadioButton fx:id="kids_radiobutton_inactive" mnemonicParsing="false" text="Inaktiv" toggleGroup="$KinderStatus" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </Pane>
+                          <ListView fx:id="kids_listview_overview" maxWidth="-1.0" prefHeight="569.0" prefWidth="322.0" VBox.vgrow="ALWAYS" />
+                                 </children>
+                              </VBox>
+                  </children>
+                </AnchorPane>
+                <AnchorPane minHeight="40.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                  <children>
+                    <TitledPane focusTraversable="false" prefHeight="187.0" prefWidth="322.0" text="Hilfe" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                      <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                          <children>
+                            <Label fx:id="kids_label_hilfe" alignment="TOP_LEFT" prefHeight="161.0" prefWidth="318.0" text="Dies ist die Hilfe der &quot;Hatchess.com&quot; eKita-Verwaltungssoftware 2014. In diesem Fenster werden zu jeder Ansicht hilfreiche Hinweise ausgegeben, um dem Anwender die Handhabung des Programmes zu erleichtern." wrapText="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                          </children>
+                        </AnchorPane>
+                      </content>
+                    </TitledPane>
+                  </children>
+                </AnchorPane>
+              </items>
+            </SplitPane>
+          </children>
+        </AnchorPane>
+        <AnchorPane minWidth="700.0">
+          <children>
+            <SplitPane dividerPositions="0.35826771653543305" focusTraversable="true" orientation="VERTICAL" prefHeight="764.0" prefWidth="764.0" visible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <VBox maxHeight="270.0" minHeight="270.0" prefHeight="270.0" prefWidth="100.0">
+                  <children>
+                    <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="762.0" style="-fx-background-color:#ccdddd;">
+                      <children>
+                        <Label text="Kinderverwaltung">
+                          <font>
+                            <Font name="System Bold" size="14.0" />
+                          </font>
+                        </Label>
+                      </children>
+                      <padding>
+                        <Insets left="15.0" />
+                      </padding>
+                      <VBox.margin>
+                        <Insets />
+                      </VBox.margin>
+                    </HBox>
+                    <GridPane hgap="10.0" prefHeight="220.0" prefWidth="752.0">
+                      <children>
+                        <TextField fx:id="kids_textfield_nachname" disable="true" onMouseEntered="#helpNachname" prefWidth="200.0" GridPane.columnIndex="1" />
+                        <TextField fx:id="kids_textfield_vorname" disable="true" onMouseEntered="#helpVorname" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="kids_textfield_strasse" disable="true" onMouseEntered="#helpStrasse" prefHeight="25.0" prefWidth="180.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+<GridPane.margin>
+<Insets right="60.0" />
+</GridPane.margin></TextField>
+<TextField fx:id="kids_textfield_hausnummer" disable="true" layoutX="130.0" layoutY="132.0" maxWidth="-Infinity" onMouseEntered="#helpNummer" prefHeight="25.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+<GridPane.margin>
+<Insets />
+</GridPane.margin>
+</TextField>
+                        <TextField fx:id="kids_textfield_plz" disable="true" onMouseEntered="#helpPlz" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label text="Name">
+<font>
+<Font name="System Bold" size="12.0" />
+</font></Label>
+                        <Label text="Vorname" GridPane.rowIndex="1">
+<font>
+<Font name="System Bold" size="12.0" />
+</font></Label>
+                        <Label text="Straße, Nr." GridPane.rowIndex="3">
+<font>
+<Font name="System Bold" size="12.0" />
+</font></Label>
+                        <Label text="Postleitzahl" GridPane.rowIndex="4">
+<font>
+<Font name="System Bold" size="12.0" />
+</font></Label>
+                        <Label text="Ort" GridPane.rowIndex="5">
+<font>
+<Font name="System Bold" size="12.0" />
+</font></Label>
+                        <Label text="Geburtsdatum" GridPane.columnIndex="2">
+<font>
+<Font name="System Bold" size="12.0" />
+</font></Label>
+                        <Label text="Gruppe" GridPane.columnIndex="2" GridPane.rowIndex="3">
+<font>
+<Font name="System Bold" size="12.0" />
+</font></Label>
+                        <TextField fx:id="kids_textfield_ort" disable="true" onMouseEntered="#helpOrt" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" /><ChoiceBox fx:id="kids_choicebox_gruppe" disable="true" onMouseEntered="#helpGruppe" prefWidth="249.0" GridPane.columnIndex="3" GridPane.rowIndex="3" /><DatePicker fx:id="kids_datepicker_geburtsdatum" disable="true" onMouseEntered="#helpGeburtsdatum" prefWidth="249.0" GridPane.columnIndex="3" /><Label text="Aktiv" GridPane.columnIndex="2" GridPane.rowIndex="4">
+<font>
+<Font name="System Bold" size="12.0" />
+</font></Label><CheckBox fx:id="kids_checkbox_aktiv" disable="true" mnemonicParsing="false" onMouseEntered="#helpAktiv" selected="true" GridPane.columnIndex="3" GridPane.rowIndex="4">
+<GridPane.margin>
+<Insets />
+</GridPane.margin></CheckBox>
+                                    <Label text="Geschlecht" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <ChoiceBox fx:id="kids_choicebox_geschlecht" disable="true" onMouseEntered="#helpGeschlecht" prefWidth="249.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                      </children>
+                      <columnConstraints>
+                        <ColumnConstraints fillWidth="true" halignment="RIGHT" hgrow="NEVER" maxWidth="182.0" minWidth="80.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="281.0" minWidth="10.0" prefWidth="205.0" />
+                        <ColumnConstraints halignment="RIGHT" hgrow="NEVER" maxWidth="185.0" minWidth="80.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="281.0" minWidth="10.0" prefWidth="205.0" />
+                      </columnConstraints>
+                      <padding>
+                        <Insets left="10.0" right="25.0" top="15.0" />
+                      </padding>
+                      <rowConstraints>
+                        <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                      </rowConstraints>
+                    </GridPane>
+                  </children>
+                </VBox>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                  <children>
+                    <VBox prefHeight="421.0" prefWidth="762.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                      <children>
+                        <TabPane fx:id="kids_tabpane_main" prefHeight="406.0" prefWidth="762.0" style="" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="SOMETIMES">
+                          <tabs>
+                            <Tab style="" text="Vertragsdaten">
+                              <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+<children><GridPane hgap="10.0" layoutX="14.0" layoutY="14.0" prefHeight="422.0" prefWidth="762.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+  <columnConstraints>
+    <ColumnConstraints halignment="RIGHT" hgrow="NEVER" maxWidth="182.0" minWidth="150.0" prefWidth="150.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="10.0" prefWidth="205.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="10.0" prefWidth="205.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+<RowConstraints minHeight="10.0" prefHeight="30.0" />
+<RowConstraints minHeight="10.0" prefHeight="30.0" />
+<RowConstraints minHeight="10.0" prefHeight="30.0" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+<RowConstraints minHeight="10.0" prefHeight="30.0" />
+<RowConstraints minHeight="10.0" prefHeight="30.0" />
+  </rowConstraints>
+<children><Label text="Vertragsbeginn" GridPane.rowIndex="1">
+<font>
+<Font name="System Bold" size="12.0" />
+</font></Label><DatePicker fx:id="kids_datepicker_vertragsbeginn" disable="true" onMouseEntered="#helpVertragsbeginn" prefWidth="249.0" GridPane.columnIndex="1" GridPane.rowIndex="1" /><Label text="Vertragsende" GridPane.rowIndex="2">
+<font>
+<Font name="System Bold" size="12.0" />
+</font></Label><DatePicker fx:id="kids_datepicker_vertragsende" disable="true" onMouseEntered="#helpVertragsende" prefWidth="249.0" GridPane.columnIndex="1" GridPane.rowIndex="2" /><Label text="Betreuungszeit" GridPane.rowIndex="4">
+<font>
+<Font name="System Bold" size="12.0" />
+</font></Label><Slider fx:id="kids_slider_betreuungszeit" blockIncrement="1.0" disable="true" majorTickUnit="1.0" max="11.0" min="4.0" minorTickCount="0" onMouseEntered="#helpBetreuungszeit" prefWidth="249.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="9.0" GridPane.columnIndex="1" GridPane.rowIndex="4" /><Label text="Nationalität" GridPane.rowIndex="7">
+<font>
+<Font name="System Bold" size="12.0" />
+</font></Label><Label text="Muttersprache" GridPane.rowIndex="8">
+<font>
+<Font name="System Bold" size="12.0" />
+</font></Label><TextField fx:id="kids_textfield_nationalitaet" disable="true" onMouseEntered="#helpNationalitaet" GridPane.columnIndex="1" GridPane.rowIndex="7" /><TextField fx:id="kids_textfield_muttersprache" disable="true" onMouseEntered="#helpMuttersprache" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                                            <Button fx:id="kids_button_betreuungszeit" disable="true" mnemonicParsing="false" onMouseEntered="#helpBetreuungszeit" prefHeight="25.0" prefWidth="249.0" text="Betreuungszeit anpassen" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                            <Label text="Betreuungsart" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <RadioButton fx:id="kids_radiobutton_krippe" disable="true" mnemonicParsing="false" onMouseEntered="#helpBetreuungsart" text="Krippe" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                               <toggleGroup>
+                                                                  <ToggleGroup fx:id="Betreuungsart" />
+                                                               </toggleGroup>
+                                                            </RadioButton>
+                                                            <RadioButton fx:id="kids_radiobutton_kiga" disable="true" mnemonicParsing="false" onMouseEntered="#helpBetreuungsart" selected="true" text="Kindergarten" toggleGroup="$Betreuungsart" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                                            <RadioButton fx:id="kids_radiobutton_hort" disable="true" mnemonicParsing="false" onMouseEntered="#helpBetreuungsart" text="Hort" toggleGroup="$Betreuungsart" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+</children>
+<padding>
+<Insets left="10.0" right="10.0" top="10.0" />
+</padding>
+</GridPane>
+</children></AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab style="" text="Berechtigte Personen">
+                              <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+<children>
+                                                      <ScrollPane hbarPolicy="NEVER" prefHeight="480.0" prefWidth="762.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                        <content>
+                                                          <AnchorPane prefHeight="506.0">
+                                                               <children>
+                                                                  <ListView fx:id="kids_listview_berechtigte" disable="true" prefHeight="400.0" prefWidth="250.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="551.0" AnchorPane.topAnchor="5.0">
+                                                                     <padding>
+                                                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                                     </padding>
+                                                                  </ListView>
+                                                                  <Separator layoutX="260.0" orientation="VERTICAL" prefHeight="422.0" />
+                                                                  <GridPane hgap="10.0" layoutX="256.0" layoutY="11.0" prefHeight="495.0" prefWidth="480.0">
+                                                                    <columnConstraints>
+                                                                      <ColumnConstraints halignment="RIGHT" hgrow="NEVER" maxWidth="182.0" minWidth="80.0" prefWidth="150.0" />
+                                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="281.0" minWidth="100.0" prefWidth="205.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                      <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                      <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                      <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                     <children>
+                                                                        <Label text="Name">
+                                                                           <font>
+                                                                              <Font name="System Bold" size="12.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Label text="Vorname" GridPane.rowIndex="1">
+                                                                           <font>
+                                                                              <Font name="System Bold" size="12.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Label text="Geburtsdatum" GridPane.rowIndex="2">
+                                                                           <font>
+                                                                              <Font name="System Bold" size="12.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Label text="Straße, Nr." GridPane.rowIndex="4">
+                                                                           <font>
+                                                                              <Font name="System Bold" size="12.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Label text="Postleitzahl" GridPane.rowIndex="5">
+                                                                           <font>
+                                                                              <Font name="System Bold" size="12.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Label text="Ort" GridPane.rowIndex="6">
+                                                                           <font>
+                                                                              <Font name="System Bold" size="12.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <TextField fx:id="kids_textfield_nachname_berechtigte" disable="true" onMouseEntered="#helpBetreuungspersonNachname" prefWidth="200.0" GridPane.columnIndex="1" />
+                                                                        <TextField fx:id="kids_textfield_vorname_berechtigte" disable="true" onMouseEntered="#helpBetreuungspersonVorname" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                        <TextField fx:id="kids_textfield_strasse_berechtigte" disable="true" onMouseEntered="#helpBetreuungspersonAdresse" prefWidth="160.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+<GridPane.margin>
+<Insets right="60.0" />
+</GridPane.margin></TextField><TextField fx:id="kids_textfield_hausnummer_berechtigte" disable="true" maxWidth="-Infinity" onMouseEntered="#helpBetreuungspersonAdresse" prefWidth="50.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+                                                                        <TextField fx:id="kids_textfield_plz_berechtigte" disable="true" onMouseEntered="#helpBetreuungspersonPlz" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                                        <TextField fx:id="kids_textfield_ort_berechtigte" disable="true" onMouseEntered="#helpBetreuungspersonOrt" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                                        <DatePicker fx:id="kids_datepicker_geburtsdatum_berechtigte" disable="true" onMouseEntered="#helpBetreuungspersonGeburtsdatum" prefWidth="280.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                        <Label text="Personensorgeberechtigt" GridPane.rowIndex="8">
+                                                                           <font>
+                                                                              <Font name="System Bold" size="12.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Label text="Kontaktperson" GridPane.rowIndex="9">
+                                                                           <font>
+                                                                              <Font name="System Bold" size="12.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <CheckBox fx:id="kids_checkbox_sorgeberechtigt" disable="true" mnemonicParsing="false" onMouseEntered="#helpBetreuungspersonSorgeberechtigt" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                                                        <CheckBox fx:id="kids_checkbox_kontaktperson" disable="true" mnemonicParsing="false" onMouseEntered="#helpBetreuungspersonKontakt" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                                                        <Label text="Privat" GridPane.rowIndex="11">
+                                                                           <font>
+                                                                              <Font name="System Bold" size="12.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Label text="Mobil" GridPane.rowIndex="12">
+                                                                           <font>
+                                                                              <Font name="System Bold" size="12.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Label text="Arbeit" GridPane.rowIndex="13">
+                                                                           <font>
+                                                                              <Font name="System Bold" size="12.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Label text="Mail" GridPane.rowIndex="14">
+                                                                           <font>
+                                                                              <Font name="System Bold" size="12.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <TextField fx:id="kids_textfield_privat_berechtigte" disable="true" onMouseEntered="#helpBetreuungspersonPrivat" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                                                                        <TextField fx:id="kids_textfield_mobil_berechtigte" disable="true" onMouseEntered="#helpBetreuungspersonMobil" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                                                                        <TextField fx:id="kids_textfield_arbeit_berechtigte" disable="true" onMouseEntered="#helpBetreuungspersonArbeit" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+                                                                        <TextField fx:id="kids_textfield_mail_berechtigte" disable="true" onMouseEntered="#helpBetreuungspersonEmail" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+                                                                     </children>
+                                                                     <padding>
+                                                                        <Insets left="10.0" right="25.0" top="15.0" />
+                                                                     </padding>
+                                                                  </GridPane>
+                                                               </children>
+                                                            </AnchorPane>
+                                                        </content>
+                                                      </ScrollPane>
+</children></AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="Gesundheitsdaten">
+                              <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+<children><GridPane hgap="10.0" prefHeight="422.0" prefWidth="762.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+  <columnConstraints>
+    <ColumnConstraints halignment="RIGHT" hgrow="NEVER" maxWidth="182.0" minWidth="80.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="10.0" prefWidth="205.0" />
+<ColumnConstraints halignment="RIGHT" hgrow="NEVER" maxWidth="180.0" minWidth="80.0" prefWidth="100.0" />
+<ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="10.0" prefWidth="205.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+<RowConstraints minHeight="10.0" prefHeight="30.0" />
+<RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" />
+<RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" />
+<RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" />
+<RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" />
+                                                            <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" />
+                                                            <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" />
+  </rowConstraints>
+<padding>
+<Insets left="10.0" right="10.0" top="10.0" />
+</padding>
+<children><Label text="Krankenkasse" GridPane.rowIndex="1">
+<font>
+<Font name="System Bold" size="12.0" />
+</font></Label><Label text="Versichert bei" GridPane.rowIndex="2">
+<font>
+<Font name="System Bold" size="12.0" />
+</font></Label><TextField fx:id="kids_textfield_krankenkasse" disable="true" onDragEntered="#helpKrankenkasse" GridPane.columnIndex="1" GridPane.rowIndex="1" /><ChoiceBox fx:id="kids_choicebox_versichert" disable="true" onDragEntered="#helpVersichert" prefWidth="249.0" GridPane.columnIndex="1" GridPane.rowIndex="2" /><Label text="Krankheiten" GridPane.rowIndex="5">
+<font>
+<Font name="System Bold" size="12.0" />
+</font></Label><TextArea fx:id="kids_textarea_krankheiten" disable="true" onDragEntered="#helpKrankheiten" prefHeight="90.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.rowSpan="3" /><Label text="Allergien" GridPane.columnIndex="2" GridPane.rowIndex="1">
+<font>
+<Font name="System Bold" size="12.0" />
+</font></Label><Label text="Besonderheiten" GridPane.columnIndex="2" GridPane.rowIndex="5">
+<font>
+<Font name="System Bold" size="12.0" />
+</font></Label><TextArea fx:id="kids_textarea_allergien" disable="true" onDragEntered="#helpAllergien" prefHeight="90.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.rowSpan="3" /><TextArea fx:id="kids_textarea_besonderheiten" disable="true" onDragEntered="#helpBesonderheiten" prefHeight="90.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5" GridPane.rowSpan="3" />
+                                                            <Label layoutX="51.0" layoutY="177.0" text="Kinderarzt" GridPane.rowIndex="9">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <ChoiceBox fx:id="kids_choicebox_doctor" disable="true" layoutX="130.0" layoutY="83.0" onDragEntered="#helpKinderarzt" prefWidth="249.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+</children>
+</GridPane>
+</children></AnchorPane>
+                              </content>
+                            </Tab><Tab text="Vollmachten">
+<content>
+<AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+<children>
+                                                      <ScrollPane prefHeight="422.0" prefWidth="762.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                        <content>
+                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="759.0">
+                                                               <children>
+                                                                  <FlowPane columnHalignment="CENTER" hgap="15.0" prefHeight="422.0" prefWidth="762.0" rowValignment="TOP" vgap="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                                                     <children>
+                                                                        <CheckBox fx:id="kids_checkbox_permission_1" alignment="TOP_LEFT" disable="true" minWidth="150.0" mnemonicParsing="false" prefWidth="350.0" text="Vollmacht-1" wrapText="true">
+            <font>
+            <Font name="System Bold" size="12.0" />
+            </font>
+                                                                        </CheckBox>
+                                                                        <CheckBox fx:id="kids_checkbox_permission_2" alignment="TOP_LEFT" disable="true" minWidth="150.0" mnemonicParsing="false" prefWidth="350.0" text="Vollmacht-2" wrapText="true">
+            <font>
+            <Font name="System Bold" size="12.0" />
+            </font>
+            </CheckBox>
+                                                                        <CheckBox fx:id="kids_checkbox_permission_3" alignment="TOP_LEFT" disable="true" minWidth="150.0" mnemonicParsing="false" prefWidth="350.0" text="Vollmacht-3" wrapText="true">
+            <font>
+            <Font name="System Bold" size="12.0" />
+            </font>
+            </CheckBox>
+                                                                        <CheckBox fx:id="kids_checkbox_permission_4" alignment="TOP_LEFT" disable="true" minWidth="150.0" mnemonicParsing="false" prefWidth="350.0" text="Vollmacht-4" wrapText="true">
+            <font>
+            <Font name="System Bold" size="12.0" />
+            </font>
+            </CheckBox>
+                                                                        <CheckBox fx:id="kids_checkbox_permission_5" alignment="TOP_LEFT" disable="true" minWidth="150.0" mnemonicParsing="false" prefWidth="350.0" text="Vollmacht-5" wrapText="true">
+            <font>
+            <Font name="System Bold" size="12.0" />
+            </font>
+            </CheckBox>
+                                                                        <CheckBox fx:id="kids_checkbox_permission_6" alignment="TOP_LEFT" disable="true" minWidth="150.0" mnemonicParsing="false" prefWidth="350.0" text="Vollmacht-6" wrapText="true">
+            <font>
+            <Font name="System Bold" size="12.0" />
+            </font>
+            </CheckBox>
+                                                                        <CheckBox fx:id="kids_checkbox_permission_7" alignment="TOP_LEFT" disable="true" minWidth="150.0" mnemonicParsing="false" prefWidth="350.0" text="Vollmacht-7" wrapText="true">
+            <font>
+            <Font name="System Bold" size="12.0" />
+            </font>
+            </CheckBox>
+                                                                        <CheckBox fx:id="kids_checkbox_permission_8" alignment="TOP_LEFT" disable="true" minWidth="150.0" mnemonicParsing="false" prefWidth="350.0" text="Vollmacht-8" wrapText="true">
+            <font>
+            <Font name="System Bold" size="12.0" />
+            </font>
+            </CheckBox>
+                                                                        <CheckBox fx:id="kids_checkbox_permission_9" alignment="TOP_LEFT" disable="true" minWidth="150.0" mnemonicParsing="false" prefWidth="350.0" text="Vollmacht-9" wrapText="true">
+            <font>
+            <Font name="System Bold" size="12.0" />
+            </font>
+            </CheckBox>
+                                                                        <CheckBox fx:id="kids_checkbox_permission_10" alignment="TOP_LEFT" disable="true" minWidth="150.0" mnemonicParsing="false" prefWidth="350.0" text="Vollmacht-10" wrapText="true">
+            <font>
+            <Font name="System Bold" size="12.0" />
+            </font>
+            </CheckBox>
+                                                                        <CheckBox fx:id="kids_checkbox_permission_11" alignment="TOP_LEFT" disable="true" minWidth="150.0" mnemonicParsing="false" prefWidth="350.0" text="Vollmacht-11" wrapText="true">
+            <font>
+            <Font name="System Bold" size="12.0" />
+            </font>
+            </CheckBox>
+                                                                        <CheckBox fx:id="kids_checkbox_permission_12" alignment="TOP_LEFT" disable="true" minWidth="150.0" mnemonicParsing="false" prefWidth="350.0" text="Vollmacht-12" wrapText="true">
+            <font>
+            <Font name="System Bold" size="12.0" />
+            </font>
+            </CheckBox>
+                                                                        <CheckBox fx:id="kids_checkbox_permission_13" alignment="TOP_LEFT" disable="true" minWidth="150.0" mnemonicParsing="false" prefWidth="350.0" text="Vollmacht-13" wrapText="true">
+            <font>
+            <Font name="System Bold" size="12.0" />
+            </font>
+            </CheckBox>
+                                                                        <CheckBox fx:id="kids_checkbox_permission_14" alignment="TOP_LEFT" disable="true" minWidth="150.0" mnemonicParsing="false" prefWidth="350.0" text="Vollmacht-14" wrapText="true">
+            <font>
+            <Font name="System Bold" size="12.0" />
+            </font>
+            </CheckBox>
+                                                                        <CheckBox fx:id="kids_checkbox_permission_15" alignment="TOP_LEFT" disable="true" minWidth="150.0" mnemonicParsing="false" prefWidth="350.0" text="Vollmacht-15" wrapText="true">
+            <font>
+            <Font name="System Bold" size="12.0" />
+            </font>
+            </CheckBox>
+                                                                        <CheckBox fx:id="kids_checkbox_permission_16" alignment="TOP_LEFT" disable="true" minWidth="150.0" mnemonicParsing="false" prefWidth="350.0" text="Vollmacht-16" wrapText="true">
+            <font>
+            <Font name="System Bold" size="12.0" />
+            </font>
+            </CheckBox>
+                                                                        <CheckBox fx:id="kids_checkbox_permission_17" alignment="TOP_LEFT" disable="true" minWidth="150.0" mnemonicParsing="false" prefWidth="350.0" text="Vollmacht-17" wrapText="true">
+            <font>
+            <Font name="System Bold" size="12.0" />
+            </font>
+            </CheckBox>
+                                                                        <CheckBox fx:id="kids_checkbox_permission_18" alignment="TOP_LEFT" disable="true" minWidth="150.0" mnemonicParsing="false" prefWidth="350.0" text="Vollmacht-18" wrapText="true">
+            <font>
+            <Font name="System Bold" size="12.0" />
+            </font>
+            </CheckBox>
+                                                                        <CheckBox fx:id="kids_checkbox_permission_19" alignment="TOP_LEFT" disable="true" minWidth="150.0" mnemonicParsing="false" prefWidth="350.0" text="Vollmacht-19" wrapText="true">
+            <font>
+            <Font name="System Bold" size="12.0" />
+            </font>
+            </CheckBox>
+                                                                        <CheckBox fx:id="kids_checkbox_permission_20" alignment="TOP_LEFT" disable="true" minWidth="150.0" mnemonicParsing="false" prefWidth="350.0" text="Vollmacht-20" wrapText="true">
+            <font>
+            <Font name="System Bold" size="12.0" />
+            </font>
+            </CheckBox>
+                                                                     </children>
+                                                                  </FlowPane>
+                                                               </children>
+                                                            </AnchorPane>
+                                                        </content>
+                                                      </ScrollPane>
+</children></AnchorPane>
+</content>
+</Tab><Tab disable="true" text="Zeiterfassung">
+<content>
+<AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+</content>
+</Tab>
+                          </tabs>
+                        </TabPane>
+                        <HBox alignment="CENTER" maxHeight="30.0" minWidth="30.0" prefHeight="30.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="NEVER">
+                          <children><HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" HBox.hgrow="ALWAYS">
+<children>
+                            <Button fx:id="kids_button_save" disable="true" focusTraversable="false" mnemonicParsing="false" onMouseEntered="#helpKindSpeichern" text="Kind speichern" HBox.hgrow="ALWAYS" />
+                            <Button fx:id="kids_button_delete" disable="true" focusTraversable="false" mnemonicParsing="false" onMouseEntered="#helpKindLoeschen" text="Kind löschen" textFill="#540000" HBox.hgrow="SOMETIMES" />
+                                                <Button fx:id="kids_button_delete_accept" disable="true" focusTraversable="false" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Kind endgültig löschen" textFill="#540000" visible="false" />
+</children></HBox><HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" HBox.hgrow="ALWAYS">
+<children><Button fx:id="kids_button_save_berechtigte" disable="true" focusTraversable="false" mnemonicParsing="false" onMouseEntered="#helpBetreuungspersonSpeichern" text="Berechtigte Person speichern" visible="false" /><Button fx:id="kids_button_delete_berechtigte" disable="true" focusTraversable="false" mnemonicParsing="false" onMouseEntered="#helpBetreuungspersonLoeschen" text="Berechtigte Person löschen" textFill="#530000" visible="false" />
+                                                <Button fx:id="kids_button_delete_berechtigte_accept" disable="true" focusTraversable="false" layoutX="216.0" layoutY="10.0" mnemonicParsing="false" text="Person endgültig löschen" textFill="#530000" visible="false" />
+</children></HBox>
+                          </children>
+                          <padding>
+                            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                          </padding>
+                        </HBox>
+                      </children>
+                    </VBox>
+                  </children>
+                </AnchorPane>
+              </items>
+            </SplitPane>
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+</AnchorPane>

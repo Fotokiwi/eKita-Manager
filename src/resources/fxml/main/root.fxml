@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane minHeight="750.0" minWidth="1100.0" prefHeight="930.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.root.rootController">
+  <bottom>
+    <GridPane alignment="CENTER_RIGHT" prefHeight="25.0" style="" BorderPane.alignment="CENTER_RIGHT">
+      <children>
+        <ProgressBar fx:id="root_progress_bar" focusTraversable="false" prefHeight="18.0" prefWidth="135.0" progress="-1.0">
+          <GridPane.margin>
+            <Insets left="10.0" right="10.0" />
+          </GridPane.margin>
+        </ProgressBar>
+        <Label alignment="CENTER_RIGHT" contentDisplay="LEFT" prefHeight="17.0" prefWidth="595.0" text="Digi-Kita GmbH - Kita-Manager 2018 -  (c) 2018 - v0.1" textAlignment="LEFT" wrapText="false" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+          <GridPane.margin>
+            <Insets left="10.0" right="10.0" />
+          </GridPane.margin>
+        </Label>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="337.0" minWidth="0.0" percentWidth="15.0" prefWidth="80.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="804.0" minWidth="10.0" prefWidth="724.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="60.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </bottom>
+  <top>
+    <VBox prefHeight="-1.0" prefWidth="1024.0">
+      <children>
+        <MenuBar useSystemMenuBar="false">
+          <menus>
+            <Menu mnemonicParsing="false" text="Datei">
+              <items>
+                <MenuItem fx:id="menuStart" mnemonicParsing="false" text="Startmenü">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                <SeparatorMenuItem mnemonicParsing="false" />
+                <MenuItem fx:id="menuSave" disable="true" mnemonicParsing="false" text="Daten sichern" />
+                        <MenuItem disable="true" mnemonicParsing="false" text="Daten wiederherstellen" />
+                <SeparatorMenuItem mnemonicParsing="false" />
+                <MenuItem fx:id="menuQuit" mnemonicParsing="false" text="Beenden">
+                  <accelerator>
+                    <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                  </accelerator>
+                </MenuItem>
+              </items>
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="D" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+            </Menu>
+                  <Menu mnemonicParsing="false" text="Einrichtung">
+                    <items>
+                      <MenuItem fx:id="menuKita" disable="true" mnemonicParsing="false" text="Informationen" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="menuGroups" disable="true" mnemonicParsing="false" text="Gruppen" />
+                        <MenuItem fx:id="menuPermissions" disable="true" mnemonicParsing="false" text="Vollmachten" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="menuStatistics" disable="true" mnemonicParsing="false" text="Statistiken" />
+                        <MenuItem fx:id="menuPrints" disable="true" mnemonicParsing="false" text="Ausdrucke" />
+                    </items>
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="E" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </Menu>
+            <Menu mnemonicParsing="false" text="Mitarbeiter">
+              <items>
+                        <MenuItem fx:id="menuEmployees" disable="true" mnemonicParsing="false" text="Mitarbeiter" />
+                        <MenuItem fx:id="menuDevices" disable="true" mnemonicParsing="false" text="Endgeräte" />
+              </items>
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="M" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+            </Menu>
+                  <Menu mnemonicParsing="false" text="Externe Anbieter">
+                    <items>
+                      <MenuItem fx:id="menuDoctors" disable="true" mnemonicParsing="false" text="Kinderärzte" />
+                    </items>
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="A" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </Menu>
+            <Menu mnemonicParsing="false" text="Einstellungen">
+              <items>
+                        <MenuItem fx:id="menuFields" disable="true" mnemonicParsing="false" text="Pflichtfelder" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                <MenuItem fx:id="menuOptions" mnemonicParsing="false" text="Optionen" />
+                <MenuItem fx:id="menuLanguage" mnemonicParsing="false" text="Sprache" />
+              </items>
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="S" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Hilfe">
+              <items>
+                <MenuItem fx:id="menuHelp" mnemonicParsing="false" text="Über Dienstplan Software" />
+              </items>
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="H" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+            </Menu>
+          </menus>
+        </MenuBar>
+        <ToolBar>
+          <items>
+            <Button fx:id="toggleKinder" focusTraversable="false" mnemonicParsing="false" text="Kinder" />
+            <Button fx:id="toggleGruppen" disable="true" focusTraversable="false" mnemonicParsing="false" text="Gruppen" />
+                  <Button fx:id="toggleZeiterfassung" disable="true" focusTraversable="false" mnemonicParsing="false" text="Zeiterfassung" />
+                  <Button fx:id="toggleStatistiken" disable="true" focusTraversable="false" layoutX="132.0" layoutY="10.0" mnemonicParsing="false" text="Statistiken" />
+                  <Button fx:id="toggleAusdrucke" disable="true" focusTraversable="false" layoutX="224.0" layoutY="10.0" mnemonicParsing="false" text="Ausdrucke" />
+                  <Button fx:id="togglePrintTest" focusTraversable="false" layoutX="299.0" layoutY="10.0" mnemonicParsing="false" text="PRINT TEST" />
+          </items>
+        </ToolBar>
+      </children>
+    </VBox>
+  </top>
+</BorderPane>

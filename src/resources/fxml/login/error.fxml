@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.error.errorController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Fehlercode:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="error_label_code" layoutX="89.0" layoutY="14.0" textFill="RED">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="43.0" text="Fehlerbeschreibung:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="error_label_description" alignment="TOP_LEFT" layoutX="14.0" layoutY="60.0" prefHeight="130.0" prefWidth="370.0" textFill="RED" wrapText="true">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="210.0" maxWidth="370.0" prefHeight="55.0" prefWidth="370.0" text="Falls Sie das Problem nicht selbständig lösen konnten wenden Sie sich bitte an unseren Support und halten Sie den Fehlercode bereit." textFill="#540000" wrapText="true" />
+      <Label layoutX="14.0" layoutY="265.0" maxWidth="370.0" text="Sie erreichen uns unter der Email: support@digi-kita.de" textFill="#540000" wrapText="true" />
+   </children>
+</AnchorPane>

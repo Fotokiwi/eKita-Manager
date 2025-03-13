@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.login.setupServerController">
+<children><HBox alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="600.0">
+<children><Button fx:id="setupserver_button_exit" graphicTextGap="0.0" layoutX="569.1875" mnemonicParsing="false" />
+</children></HBox><VBox layoutX="14.0" layoutY="14.0" prefHeight="265.0" prefWidth="575.0" spacing="15.0">
+<children>
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0">
+               <children><Label text="Netzwerkeinstellungen" textAlignment="CENTER" underline="true">
+<font>
+<Font name="System Bold" size="24.0" />
+</font></Label>
+               </children>
+            </HBox><HBox>
+<children><Label prefWidth="250.0" text="%key.setupserver_databasetype" /><ToggleButton fx:id="setupserver_togglebutton_sqlite" mnemonicParsing="false" text="%key.setupserver_localserver">
+<toggleGroup>
+<ToggleGroup fx:id="DatabaseType" />
+</toggleGroup></ToggleButton><ToggleButton fx:id="setupserver_togglebutton_mysql" mnemonicParsing="false" selected="true" text="%key.setupserver_remoteserver" toggleGroup="$DatabaseType" />
+</children></HBox><HBox>
+<children><Label fx:id="setupserver_label_databasename" prefWidth="250.0" text="%key.setupserver_databasename" /><TextField fx:id="setupserver_textfield_databasename" />
+</children></HBox><HBox>
+<children><Label fx:id="setupserver_label_databaseurl" prefWidth="250.0" text="%key.setupserver_databaseurl" /><TextField fx:id="setupserver_textfield_databaseurl" /><Button fx:id="setupserver_button_searchserver" mnemonicParsing="false" text="%key.setupserver_searchserver">
+<HBox.margin>
+<Insets left="10.0" />
+</HBox.margin></Button>
+</children></HBox>
+<HBox disable="true" layoutX="10.0" layoutY="170.0">
+<children>
+<Label prefWidth="250.0" text="%key.setupserver_databaseprotocol" /><ToggleButton fx:id="setupserver_togglebutton_protocol_http" mnemonicParsing="false" selected="true" text="%key.setupserver_protocol_http">
+<toggleGroup>
+<ToggleGroup fx:id="Protocol" />
+</toggleGroup></ToggleButton><ToggleButton fx:id="setupserver_togglebutton_protocol_https" mnemonicParsing="false" text="%key.setupserver_protocol_https" toggleGroup="$Protocol" />
+</children>
+</HBox><HBox>
+<children><Label fx:id="setupserver_label_databaseuser" prefWidth="250.0" text="%key.setupserver_databaseuser" /><TextField fx:id="setupserver_textfield_databaseuser" />
+</children></HBox><HBox>
+<children><Label fx:id="setupserver_label_databasepassword" prefWidth="250.0" text="%key.setupserver_databasepassword" /><PasswordField fx:id="setupserver_textfield_databasepassword" />
+</children></HBox>
+</children></VBox><HBox alignment="CENTER" layoutX="100.0" layoutY="336.0" prefHeight="50.0" prefWidth="400.0" spacing="50.0">
+<children><Button fx:id="setupserver_button_saveserver" mnemonicParsing="false" text="%key.setupserver_saveserver" /><Button fx:id="setupserver_button_resetserver" mnemonicParsing="false" text="%key.setupserver_resetserver" />
+</children></HBox>
+</children></AnchorPane>
